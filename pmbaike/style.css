@@ -1,0 +1,384 @@
+
+/****Base****/
+body, div, dl, dt, dd, ul, ol, li, 
+h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, 
+input, textarea, p, blockquote, th, td {
+  margin:0;
+  padding:0;
+}
+body {
+  background-color: #F3F3F3;
+  font: 12px/22px 'Microsoft Yahei','\5b8b\4f53',微软雅黑, Arial, Lucida Grande, Tahoma, sans-serif;
+  color: #131313;
+  
+}
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: #333435;
+}
+ol,ul{
+  list-style: none;
+}
+.clearfix:after {
+  content:"\200B"; 
+  display:block; 
+  height:0; 
+  clear:both; 
+}
+.clearfix { 
+  *zoom:1; 
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+/****End Base****/
+
+/****header****/
+#header {
+  padding: 0 0 10px;
+  margin: 0 0 5px;
+  background: url(images/header.png) repeat-x;
+  color:#FFF; 
+}
+.logo {
+  float:left;
+}
+.logo a {
+  display: block;
+  width: 385px;
+  height: 114px;
+  background: url(images/logo.png) no-repeat 5px 30px;
+  text-indent: -9999px;
+}
+.top-linksearch {
+  float:right;
+  padding:8px 4px;
+}
+.top-link a {
+  padding: 0 6px;
+  color: #FFF;
+}
+.top-link a:hover {
+  color:#F9C006;
+
+}
+.top-search {
+  margin: 22px 0 0 27px;
+  background: url(images/bg.png) 0 -115px no-repeat;
+}
+.search-keyword {
+  width: 195px;
+  height: 26px;
+  margin: 3px 3px 3px 5px;
+  border: 0;
+  line-height: 26px;    
+  color: #666;
+  font-size: 13px;
+}
+.search-btn {
+  width: 74px;
+  height: 32px;
+  border: none;
+  background: none;
+  text-indent: -999px;
+  cursor: pointer; 
+}
+.top-nav {
+  clear:both;
+  font-size: 0;
+}
+.top-nav ul li {
+  display: inline-block;
+}
+
+.top-nav ul li a {
+  display: inline-block;
+  height:37px; 
+  padding: 0 25px 0 23px;
+  border-right: 1px solid #3588E3;
+  line-height: 37px;
+  color:#FFF;
+  font-size: 14px;
+}
+.top-nav ul li a:first-child {
+  border-left: 1px solid #3588E3;
+}
+.top-nav ul li a:hover {
+  background-color: #1873DE;
+}
+/****End Header****/
+
+/****Content****/
+#content-list {
+  float: left; 
+  width: 710px;  
+}
+.content {
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 1px solid #DBDBDB;
+  background: #FFF; 
+  border-radius: 4px;
+}
+.img-box {
+  display: inline-block;
+}
+.img-box a img {
+  width: 137px;
+  height: 102px; 
+  padding: 4px;
+  border: 1px #DBDBDB solid;
+  background: #FFF;
+  
+}
+.img-box a:hover img {
+  border: 1px #3991D0 solid;
+  transition: border-color 0.5s;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3);  
+}
+.content .article {
+  display: inline-block;
+  width: 520px;
+  margin-left: 7px; 
+  vertical-align: top;
+}
+.article h2 {
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.article h2 a:hover {
+  color:#F60;
+}
+.info .click {
+  color:#F60;
+}
+.info .bar,.article .brief {
+  color: #7A7A7A;
+}
+.page-nav {
+  height: 36px;
+  margin-bottom: 24px;
+  line-height: 36px;
+  text-align: center;
+}
+.page-nav a {
+  margin: 2px;
+  padding: 3px 8px;
+  border: 1px solid #ccf;
+  color: #888;
+  border-radius: 12px;
+}
+.page-nav a.active, .page-nav a:hover {
+  border: 1px solid #FA983F;
+  color: #F53B24;
+  font-weight: bolder;
+}
+/****End Content****/
+
+/****Sidebar****/
+#aside {
+  float:right;
+  width: 275px;
+}
+.contact-feed {
+  margin-bottom: 10px;
+  padding: 12px 8px 22px 12px;
+  border: 1px solid #DBDBDB;
+  background:#FFF;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #EEE;
+}
+ul.contact {
+  padding-bottom: 5px;
+  font-size: 0;
+}
+.contact li {
+  display: inline-block;
+  margin:0 1px;
+}
+.contact li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url(images/contact.png) no-repeat;
+  text-indent: -9999px;
+}
+.contact li a.sinaweibo {
+  background-position: 0 -120px;
+}
+.contact li a.qqweibo {
+  background-position: 0 -80px;
+}
+.contact li a.qq {
+  background-position: 0 -160px;
+}
+.contact li a.email {
+  background-position: 0 -40px;
+}
+.contact li a.rss {
+  background-position: 0 -200px;
+}
+.contact-feed .feed-mail {
+  width: 178px;
+  height: 20px;
+  padding: 4px;
+  border: #DBDBDB 1px solid;
+  vertical-align: middle;
+  line-height: 20px;
+}
+.contact-feed .feed-btn {
+  width: 60px;
+  height: 30px;
+  margin-left: -3px;
+  border: #DBDBDB 1px solid;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.tab-box {
+  background-color: #FFF;
+}
+.tab-box .tab {
+  float: left;
+  width: 90px;
+  height: 32px;
+  border-bottom: 1px #DBDBDB solid;
+  border-right: 1px #DBDBDB solid;
+  line-height: 32px;
+  background-color: #E6E6E6;
+  font-weight: bold;                                    
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.tab.active{
+  background-color: #3991D0;
+  color: #FFF;
+}
+.tab-content-wrap {
+  padding: 5px 10px;
+}
+.tab-content {
+  float: left;
+  display: none;
+}
+.tab-content li{
+  width: 255px;
+  padding: 3px 0;
+  border-bottom: 1px dotted #CCC;
+}
+.tab-content li .tc-title {
+  padding-left: 15px;
+  background: url(images/tctitle_icon.png) no-repeat 3px;
+  overflow: hidden;
+}
+.tab-content li .tc-title:hover {
+  color: #F60;
+}
+.tab-content.active {
+  display: block;
+}
+.tags-box {
+  background-color: #FFF;
+}
+.tags-box h3 {
+  height: 32px;
+  padding: 0 10px;
+  background-color: #3991D0;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;
+}
+.tags-box .tags {
+  width: 250px;
+  padding: 13px 10px 10px;
+}
+.tags a {
+  margin:0 5px; 
+}
+/****End Sidebar***/
+
+/****Footer****/
+.links {
+  padding: 20px 15px;
+  border-bottom: 1px #DADADA solid;
+  background-color: #FFF;
+  text-align: center;
+}
+.links strong {
+  color:#BC0808;
+}
+.links a {
+  margin: 0 8px;
+}
+.footer-wrap {
+  height: 162px;
+  background-color: #3991D0;
+  color:#FFF;
+}
+.footer-wrap a {
+  margin: 0 8px;
+  color: #FFF;
+}
+.footer-links {
+  padding: 18px 0 10px 292px; 
+}
+.footer-wrap .footer-links a {
+  display: inline-block;
+  height: 30px;
+  padding-left: 30px;
+  background: url(images/footer_links.png) no-repeat;
+  line-height: 30px;
+}
+.footer-links a.link-sitemap {
+  background-position: 0 0;
+}
+.footer-links a.link-baidu {
+  background-position: 0 -30px;
+}
+.footer-links a.link-google {
+  background-position: 0 -60px;
+}
+.footer-links a.link-exemption {
+  background-position: 0 -90px;
+}
+.copyright {
+  padding-left: 300px;
+}
+/****End Footer****/
+
+/****Up&Down****/
+#up-down {
+  position: fixed;
+  right: 69px;
+  top: 48%;
+  width: 30px;
+}
+#up-down .to-top {
+  display: none;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+  background: url(images/updown.png) no-repeat 0 0;
+  cursor: pointer;
+}
+#up-down .to-top:hover {
+  background: url(images/updown.png) no-repeat -31px 0;
+}
+#up-down .to-bottom {
+  position: absolute;
+  top: 35px;
+  width: 30px;
+  height: 30px;
+  background: url(images/updown.png) no-repeat 0 -68px;
+  cursor: pointer;
+}
+#up-down .to-bottom:hover {
+  background: url(images/updown.png) no-repeat -31px -68px;
+}
+/****End Up&Down****/
+
+
+/****EOF****/
