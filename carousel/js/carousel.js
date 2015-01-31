@@ -90,8 +90,8 @@ Carousel.prototype = {
   fade: function(i){
     var me = this;   
     if(i > 0){
-      this.$img.find('a').eq(1).siblings().animate({'opacity' : 0},400);
-      this.$img.find('a').eq(1).animate({'opacity' : 1},400,function(){        
+      this.$img.find('a').eq(i).siblings().stop().animate({'opacity' : 0},400);
+      this.$img.find('a').eq(i).stop().animate({'opacity' : 1},400,function(){        
         for(var k=0; k<i;k++){
           me.$img.find('a').last().after(me.$img.find('a').first());
         }
@@ -99,8 +99,8 @@ Carousel.prototype = {
       }); 
          
     }else{     
-      this.$img.find('a').eq(this.imgLen-1).siblings().animate({'opacity' : 0},400);
-      this.$img.find('a').eq(this.imgLen-1).animate({'opacity' : 1},400,function(){
+      this.$img.find('a').eq(this.imgLen+i).siblings().stop().animate({'opacity' : 0},400);
+      this.$img.find('a').eq(this.imgLen+i).stop().animate({'opacity' : 1},400,function(){
         for(var k=0; k>i; k--){
           me.$img.find('a').first().before(me.$img.find('a').last());
         }     
