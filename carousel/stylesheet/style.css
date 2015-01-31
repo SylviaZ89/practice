@@ -23,6 +23,12 @@
 .carousel .images a {
   float:left;
 }
+.carousel .images.fade-layout a{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity:0;  
+}
 .carousel .arrow { 
   display: none;
   position: absolute;
