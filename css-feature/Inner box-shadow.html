@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inner Box-shadow</title>
+	<style>
+	.outside {
+		box-shadow: inset 0 0 10px #EBC44F;
+	}
+	.shadow-holder {
+		display: inline-block;
+		border-radius: 10px ;
+		box-shadow: inset 0 0 10px #EBC44F;
+	}
+	.inside {
+		position: relative;
+		z-index: -1;
+		vertical-align: top;  	
+	}
+	</style>
+</head>
+<body>
+	<img class="outside" src="images/hedgehog.jpeg" alt="">
+	<p>box-shadow的inset内阴影不能直接应用于图片,木有效果</p>
+	<div class="shadow-holder">
+		<img class="inside" src="images/hedgehog.jpeg" alt="">
+	</div>
+	<p>可以在图片外嵌套一层，也可以用将图片设置为容器的背景图</p>
+</body>
+</html>
