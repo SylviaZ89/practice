@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正在登陆...</title>
+	<style>
+	p {
+  margin: 40px;
+  padding: 20px;
+}
+@-webkit-keyframes ellipsis {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loading span {
+  -webkit-animation: ellipsis 1s infinite;
+}
+.loading span:nth-child(2) {
+  -webkit-animation-delay: 100ms;
+}
+.loading span:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+}
+.loading span:last-child {
+  -webkit-animation-delay: 500ms;
+}
+.ugly span{
+  display: inline-block;
+  position: relative;
+}
+@-webkit-keyframes horizontal { 
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@-webkit-keyframes vertical {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
+.ugly span {
+ -webkit-animation: horizontal 1s ease infinite;
+}
+.ugly span:first-child {
+  -webkit-animation-delay: 100ms;
+}
+.ugly span:nth-child(3) {
+  -webkit-animation: vertical 1s ease-in infinite;
+}
+
+	</style>
+</head>
+<body>
+	<p>简单写了一下在chrome的效果，没有做兼容
+	</p>
+	  <p class="loading">正在登陆
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+  </p>
+  <p class="ugly">ugly and useless
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+    <span>.</span>
+  </p>
+</body>
+</html>
