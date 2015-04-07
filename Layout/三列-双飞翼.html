@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout-双飞翼</title>
+	<style>
+	#header, #footer {
+		height: 50px;
+		background: gray;
+	}
+	#footer{
+		clear:both;
+	}
+	#main {
+		width:90%;
+		margin: 0 auto;
+	}
+	.content-wrap {
+		float: left;
+		width: 100%;
+		background: #B9EB4A;
+	}
+	.content {	
+		margin-left: 200px;
+		margin-right: 150px;
+	}
+	.sub {
+		float: left;
+		width: 200px;
+		margin-left: -100%;
+		background: #EBDA98;
+	}
+	.extra {
+		float: left;
+		width: 150px;
+		margin-left: -150px;
+		background: #EBDA98;
+	}
+	</style>
+</head>
+<body>
+	<div id="header">Header</div>
+	<div id="main">
+		<div class="content-wrap">
+			<div class="content">
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+				<p>content</p>
+			</div>
+		</div>
+		<div class="sub">
+			<p>sub</p>
+			<p>sub</p>
+			<p>sub</p>
+			<p>sub</p>
+		</div>
+		<div class="extra">
+			<p>extra</p>
+			<p>extra</p>
+			<p>extra</p>
+			<p>extra</p>
+		</div>
+	</div>
+	<div id="footer">Footer</div>
+</body>
+</html>
