@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Layout-3row</title>
+	<style>
+		#header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100px;
+			background-color: #EBDA98;
+		}
+		#main {
+			position: absolute;
+			top: 100px;
+			left: 0;
+			bottom: 100px;
+			right: 0;
+			overflow: auto;
+		}
+		.content-wrap {
+			height: 2000px;
+		}
+		#footer {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100px;
+			background-color: #EBDA98;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="header">Header</div>
+	<div id="main">
+		<div class="content-wrap">
+			<p>Header和Footer固定高度，中间内容自适应</p>
+			<p>content</p>
+			<p>content</p>
+			<p>content</p>
+		</div>
+	</div>
+	<div id="footer">Footer</div>
+</body>
+</html>
