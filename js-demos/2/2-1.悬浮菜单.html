@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-1.悬浮菜单</title>
+	<style>
+		a, a:hover {
+			text-decoration: none;
+		}
+		.container {
+			width: 80px;
+			margin: 0 auto;
+		}
+		.menu {
+			display: none;
+			margin-top: 5px;
+			padding:0;
+			border: 1px solid #9A99FF;
+			list-style: none;
+		}
+		.menu li {
+			display: block;
+			line-height: 35px;
+			
+		}
+		.menu li a {
+			display: block;
+			padding:0 5px;
+			color: dodgerblue;
+		}
+		.menu li a:hover{
+			background: #9A99FF;
+			color: darkblue;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button>输入法</button>
+		<ul class="menu">
+			<li><a href="#">中文</a></li>
+			<li><a href="#">英文</a></li>
+			<li id="close"><a href="#">关闭</a></li>
+		</ul>
+	</div>
+	<script>
+		window.onload = function () {
+			var btn = document.getElementsByTagName('button')[0],
+				menu = document.getElementsByClassName('menu')[0],
+				close = document.getElementById('close'),
+				style = menu.style;
+			btn.onclick = function () {
+				style.display = style.display === 'block' ? 'none' : 'block';
+			}
+			close.onclick = function () {
+				menu.style.display = 'none';
+			}
+		}
+	</script>
+</body>
+</html>

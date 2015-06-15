@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-2.传参</title>
+	<style>
+		input {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="city" value="上海市">
+	<input type="text" id="region" value="杨浦区">
+	<button>传参</button>
+	<script>
+		window.onload = function() {
+			var city = document.getElementById('city');
+			  region = document.getElementById('region'),
+			  	 btn = document.getElementsByTagName('button')[0];
+			btn.onclick = function() {
+				alert(city.value + ', ' + region.value);
+			}
+		}
+	</script>
+</body>
+</html>

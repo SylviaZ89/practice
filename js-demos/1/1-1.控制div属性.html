@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-1.控制div属性</title>
+	<style>
+		.container {
+			width: 600px;
+			margin: 0 auto;
+			text-align: center;
+		}
+		button {
+			width: 100px;
+			height: 30px;
+			font-size: 16px;
+		}
+		#box {
+			width: 300px;
+			height: 300px;
+			margin: 10px auto;
+			background: #9080EB;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<button>变宽</button>
+			<button>变高</button>
+			<button>变色</button>
+			<button>隐藏</button>
+			<button>重置</button>
+			<div id="box"></div>
+	</div>	
+	<script>
+		var changeStyle = function (elem, attr, value){
+			elem.style[attr] = value;
+		};
+		window.onload = function() {
+			var btn = document.getElementsByTagName('button');
+			var box = document.getElementById('box');
+			var att = ["width","height","background","display","display"];
+			var val = ["400px","400px","#7EEBAD","none","block"];
+	
+			for (var i = 0; i < btn.length; i++){
+				btn[i].index = i;
+				btn[i].onclick = function (){
+					this.index == btn.length - 1 && (box.style.cssText = "");
+					changeStyle(box, att[this.index], val[this.index]);
+				};	
+			}
+		}
+	</script>
+</body>
+</html>

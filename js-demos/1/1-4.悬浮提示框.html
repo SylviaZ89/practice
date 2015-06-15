@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1-4.悬浮提示框</title>
+	<style>
+		#tips {
+			display: none;
+			width:200px;
+			padding: 10px;
+			margin: 5px;
+			background: #BE85EB;
+			
+		}
+	</style>
+</head>
+<body>
+	<label for="auto">
+		<input type="checkbox" id="auto">下次自动登录
+	</label>
+	<p id="tips">请不要再公共设备使用此功能</p>
+	<script>
+		window.onload = function() {
+			var label = document.getElementsByTagName('label')[0],
+				tips = document.getElementById('tips');
+			label.onmouseover = function() {
+				tips.style.display = 'block';
+			}
+			label.onmouseout = function () {
+				tips.style.display = 'none';
+			}
+			
+		}
+	</script>
+</body>
+</html>
