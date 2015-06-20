@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-2.弹出遮罩</title>
+	<style>
+		body, ul, h2 {
+			margin: 0;
+		}
+		a, a:visited, a:active {
+			text-decoration: none;
+			color: #7278EB;
+		}
+		.container {
+			width: 800px;
+			margin: 0 auto;
+		}
+		nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: #84DFEB;
+		}
+		.log-reg {
+			float: right;
+			margin-right: 50px;
+			list-style: none;
+		}
+		.log-reg li {
+			display: inline-block;
+			margin: 10px
+		}
+		.log-reg li a {
+			display: block;
+			width: 60px;
+			height: 50px;
+		}
+		.mask {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, .1);
+			z-index: 998;
+		}
+		#log-box {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 500px;
+			height: 300px;
+			margin: -152px 0 0 -252px;
+			border: 4px solid #84DFEB;
+			background: #FFF;
+			z-index: 999;
+		}
+		#log-box h2 {
+			background: #84DFEB;
+			text-align: right;
+		}
+		#close {
+			margin-right: 10px;
+			color: #7278EB;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="log-reg">
+			<li>
+				<a href="javascript:void(0)" id="register"><h2>登陆</h2></a>
+			</li>
+			<li>
+				<a href="javascript:void(0)" id="login"><h2>注册</h2></a>
+			</li>
+		</ul>		
+	</nav>
+	<div class="mask"></div>
+	<div id="log-box">
+		<h2>
+			<span id="close">X</span>
+		</h2>
+	</div>
+	<script>
+		window.onload = function() {
+			var reglog = document.getElementsByClassName('log-reg')[0],
+			   mask = document.getElementsByClassName('mask')[0],
+			 logBox = document.getElementById('log-box'),
+			  close = document.getElementById('close');
+			reglog.onclick = function () {
+				mask.style.display = 'block';
+				logBox.style.display = 'block';
+				console.log('reglog')
+			}
+			close.onclick = function(){
+				mask.style.display = 'none';
+				logBox.style.display = 'none';
+			}
+			
+		}
+	</script>
+</body>
+</html>
