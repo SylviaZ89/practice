@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-3.图片透明</title>
+	<style>
+		ul {
+			list-style: none;
+		}
+		ul li {
+			display: inline-block;
+		}
+		ul li img {
+			opacity: .4;
+			/*filter:alpha(opacity=4);*/
+		}
+		/*ul li:hover img {
+			opacity: 1;
+		}*/
+		ul li.active img {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img src="images/1.jpg" alt="porsche"></li>
+		<li><img src="images/2.jpg" alt="lamboghini"></li>
+	</ul>
+	<script>
+		window.onload = function() {
+			var list = document.getElementsByTagName('li');
+			for(var i = 0; i < list.length; i++) {
+				list[i].onmouseover = function() {
+					this.className = 'active'
+				}
+				list[i].onmouseout = function() {
+					this.className = ''
+				}
+			}
+		}
+	</script>
+</body>
+</html>

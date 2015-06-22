@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2-4.选项卡</title>
+	<style>
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #3991D0;
+    }
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:after {
+      clear: both;
+    }
+    .clearfix:before,
+    .clearfix:after {
+      content: '';
+      display: table;
+    }
+		.tab-box {
+      width: 273px;
+		  background-color: #FFF;
+      border: 2px solid #3991D0;
+		}
+		.tab-box .tab {
+		  float: left;
+		  width: 90px;
+		  height: 32px;
+		  border-bottom: 1px #DBDBDB solid;
+		  border-right: 1px #DBDBDB solid;
+		  line-height: 32px;
+		  background-color: #E6E6E6;
+		  font-weight: bold;                                    
+		  font-size: 14px;
+		  text-align: center;
+		  cursor: pointer;
+		}
+		.tab.active{
+		  background-color: #3991D0;
+		  color: #FFF;
+		}
+		.tab-content-wrap {
+		  padding: 5px 10px;
+		}
+		.tab-content {
+		  float: left;
+		  display: none;
+		}
+		.tab-content li{
+		  width: 255px;
+		  padding: 3px 0;
+		  border-bottom: 1px dotted #CCC;
+		}
+		.tab-content li .tc-title:hover {
+		  color: #F60;
+		}
+		.tab-content.active {
+		  display: block;
+		}
+	</style>
+</head>
+<body>
+  <div class="tab-box">
+    <ul class="tab-wrap clearfix">
+      <li class="tab active">最新文章</li>
+      <li class="tab">热门文章</li>
+      <li class="tab">随机推荐</li>
+    </ul>
+     <div class="tab-content-wrap clearfix">
+       <ul class="tab-content active">
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+         <li><a href="javascript:" title="广告创意中的情感因素">广告创意中的情感因素</a></li>
+       </ul>
+
+       <ul class="tab-content">
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+         <li><a href="javascript:" title="浅议自媒体“逻辑思维”">浅议自媒体“逻辑思维”</a></li>
+       </ul>
+       <ul class="tab-content">
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+         <li><a href="javascript:" title="移动学习，如何做交互设计">移动学习，如何做交互设计</a></li>
+       </ul>            
+     </div>
+   </div>
+   <script>
+         window.onload = function() {
+           var tabs = document.getElementsByClassName('tab'),
+               tabC = document.getElementsByClassName('tab-content');
+           for(var i = 0 ;i <tabs.length; i++)  {
+             tabs[i].idx = i;
+             tabs[i].onmouseover = function() {
+                for(var j = 0; j < tabs.length; j++) {
+                 tabs[j].className='tab';
+                 tabC[j].className = 'tab-content';        
+               }
+    			      this.className = 'tab active';
+  			        tabC[this.idx].className = 'tab-content active';                      
+             }
+           }
+          /* Jquery 
+          $tabs.on('click', function(){
+            var $curTab = $(this),
+              idx = $curTab.index();
+            $curTab.addClass('active').siblings().removeClass('active');
+            $tabC.removeClass('active').eq(idx).addClass('active');
+          });
+          */
+
+         }
+
+   </script>
+</body>
+</html>
