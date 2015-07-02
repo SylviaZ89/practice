@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全屏布局-1-定宽position</title>
+  <style>
+  html,body,.container {
+    margin:0;
+    height:100%;
+    overflow:hidden;
+  }
+  .header {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:100px;
+    background:#9e9596;
+  }
+  .sub {
+      position:absolute;
+      left:0;
+      top:100px;
+      bottom:50px;
+      width:200px;
+      background:#B9EB4A;
+  }
+  .content-wrap {
+    position:absolute;
+    left:200px;
+    top:100px;
+    bottom:50px;
+    right:0;
+    background:#ebe296;
+    overflow: auto;
+  }
+  .content {
+    min-height: 1000px;
+  }
+  .footer {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:50px;
+    background: #9e9596;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">header</div>
+    <div class="sub">sub</div>
+    <div class="content-wrap">
+      <div class="content">content</div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+</html>
