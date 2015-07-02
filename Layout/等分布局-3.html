@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>等分布局-3-flex</title>
+  <style>
+    .container {
+      display: flex;
+    }
+    .content {
+      flex: 1;
+      background: #ebe296;
+    }
+    .content+.content {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="content">
+        <p>flex大法好</p>
+        </div>
+      <div class="content">
+        <p>flex：1</p>
+        <p>自动等高</p>
+      </div>
+      <div class="content">
+        <p>间距通过margin控制</p>
+      </div>
+      <div class="content">
+        <p>兼容啊兼容</p>
+      </div>
+    </div>
+</body>
+</html>

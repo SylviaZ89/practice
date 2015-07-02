@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>左定宽右自适应-1</title>
+  <style>
+    .sub {
+      float: left;
+      width: 200px;
+      margin-left: -100%;
+      background: #6df0d0;
+    }
+    .main-wrap {
+      float: left;
+      width: 100%;
+      background: #ebe296;
+    }
+    .main {
+      margin-left: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="main-wrap">
+      <div class="main">
+        <p>类似圣杯布局</p>
+        <p>增加main-wrap</p>
+        <p>调整侧边栏margin-left为负100%</p>
+        <p>兼容性ok</p>
+      </div>
+    </div>
+    <div class="sub">
+      <p>sub</p>
+      <p>sub</p>
+      <p>sub</p>
+      <p>sub</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>左定宽右自适应-2-overflow</title>
+</head>
+<style>
+  .sub {
+    float: left;
+    width: 200px;
+    background: #6df0d0;
+  }
+  .main {
+    overflow: hidden;
+    background: #ebe296;
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="sub">
+      <p>float:left</p>
+      <p>定宽</p>
+    </div>
+    <div class="main">
+      <p>overflow：hidden</p>
+      <p>触发BFC</p>
+      <p>不兼容ie6</p>
+      <p>content</p>
+    </div>
+  </div>
+</body>
+</html>

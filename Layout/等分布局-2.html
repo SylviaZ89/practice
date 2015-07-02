@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>等分布局-2-table</title>
+  <style>
+    .fix {
+      margin-left: -20px;
+    }
+    .container {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+    .content {
+      display: table-cell;
+      padding-left: 20px;
+      background: #ebe296;
+      background-clip: content-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="fix">
+    <div class="container">
+      <div class="content">
+        <p>在最外层增加结构，margin-left:-20px</p>
+        </div>
+      <div class="content">
+        <p>display: table-cell;</p>
+        <p>父级table-layout: fixed布局优先，会自动等分子列</p>
+      </div>
+      <div class="content">
+        <p>间距通过padding控制，导致背景颜色覆盖了间距</p>
+        <p>需要添加background-clip: content-box;</p>
+        <p>ie9+</p>
+      </div>
+      <div class="content">
+        <p>自动等高</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

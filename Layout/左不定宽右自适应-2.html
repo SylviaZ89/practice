@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>左不定宽右自适应-2-table</title>
+  <style>
+    .container {
+      display: table;
+      width: 100%;
+    }
+    .sub, .main {
+      display: table-cell;
+    }
+    .sub {
+      width: 0.1%;
+      background: #6df0d0;
+    }
+    .main {
+      background: #ebe296;
+    }
+    .sub p {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sub">
+      <p>display:table-cell</p>
+      <p>宽度0.1%，使其足够小，由内容撑开</p>
+      <p>两列自动等高</p>
+    </div>
+    <div class="main">
+      <p>display:table-cell</p>
+      <p>父级container设置display：table，width：100%</p>
+      <p>如果设置间距需要用padding</p>
+      <p>不兼容ie6，7</p>
+    </div>
+  </div>
+</body>
+</html>

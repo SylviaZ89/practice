@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>等高布局</title>
+  <style>
+    .sub {
+      float: left;
+      width: 200px;
+      background: #6df0d0;
+    }
+    .main {
+      overflow: hidden;
+      background: #ebe296;
+    }
+    .sub, .main {
+      padding-bottom: 9999px;
+      margin-bottom: -9999px;
+    }
+    .container {
+      overflow: hidden;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="sub">
+        <p>float:left</p>
+        <p>padding-bottom: 9999px;</p>
+        <p>margin-bottom: -9999px;</p>
+      </div>
+      <div class="main">
+        <p>overflow：hidden</p>
+        <p>触发BFC</p>
+        <p>不兼容ie6</p>
+        <p>padding-bottom: 9999px;</p>
+        <p>margin-bottom: -9999px;</p>
+        <p>父级container加overflow：hidden</p>
+      </div>
+    </div>
+</body>
+</html>

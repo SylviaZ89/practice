@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>左不定宽右自适应-3-flex</title>
+  <style>
+  .container {
+    display: flex;
+  }
+  .sub {
+    background: #6df0d0;
+  }
+  .main {
+    background: #ebe296;
+    flex: 1;
+  }
+  .sub p {
+    width: 200px;
+  }
+  </style>
+  </head>
+  <body>
+  <div class="container">
+    <div class="sub">
+      <p>宽度由内容决定</p>
+      <p>两列自动等高</p>
+    </div>
+    <div class="main">
+      <p>flex:1</p>
+      <p>父级container设置display：flex</p>
+      <p>兼容不好</p>
+      <p>适合小范围布局，性能一般</p>
+    </div>
+  </div>
+</body>
+</html>
