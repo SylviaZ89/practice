@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全屏布局-3-自适应flex</title>
+  <style>
+  html,body,.container {
+    margin:0;
+    height:100%;
+    overflow:hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    background:#9e9596;
+  }
+  .main {
+    display: flex;
+    flex: 1;
+  }
+  .sub {
+      background:#B9EB4A;
+  }
+  .content-wrap {
+    flex: 1;
+    background:#ebe296;
+    overflow: auto;
+  }
+  .content {
+    min-height: 1000px;
+  }
+  .footer {
+    background: #9e9596;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <p>header</p>
+    </div>
+    <div class="main">
+      <div class="sub">subsubsub</div>
+      <div class="content-wrap">
+        <div class="content">content</div>
+      </div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+</html>

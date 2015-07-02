@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>全屏布局-1-定宽flex</title>
+  <style>
+  html,body,.container {
+    margin:0;
+    height:100%;
+    overflow:hidden;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    height:100px;
+    background:#9e9596;
+  }
+  .main {
+    display: flex;
+    flex: 1;
+  }
+  .sub {
+      width:200px;
+      background:#B9EB4A;
+  }
+  .content-wrap {
+    flex: 1;
+    background:#ebe296;
+    overflow: auto;
+  }
+  .content {
+    min-height: 1000px;
+  }
+  .footer {
+    height:50px;
+    background: #9e9596;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">header</div>
+    <div class="main">
+      <div class="sub">sub</div>
+      <div class="content-wrap">
+        <div class="content">content</div>
+      </div>
+    </div>
+    <div class="footer">footer</div>
+  </div>
+</body>
+</html>
