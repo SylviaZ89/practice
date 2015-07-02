@@ -9,29 +9,45 @@
     height:100%;
     overflow:hidden;
   }
+  /* 将页面分为三行两列。
+  auto即minmax(min-content,max-content)，
+  表示一个范围，从网格内子元素最小长度，到网格内子元素最大长度。
+  ‘fr‘是个数值单位，将容器中所剩长度按比例分配。
+  比如：容器的总长度为1000px，grid-template-rows: 100px 1fr 2fr;
+       则后两列按照1：2的比例分配（1000-100）px。
+  */
   .container {
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
   }
+  /*grid-column和grid-row分别为起始网格的序号。span 2表示跨越2个网格
+    是grid-column-span:2的缩写。
+  */
   .header {
     background:#9e9596;
+    grid-column:1/span 2;
+    grid-row: 1;
   }
-  .main {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
+
   .sub {
       background:#B9EB4A;
+      grid-column: 1;
+      grid-row: 2;
   }
   .content-wrap {
     background:#ebe296;
     overflow: auto;
+    grid-column: 2;
+    grid-row: 2;
   }
   .content {
     min-height: 1000px;
   }
   .footer {
     background: #9e9596;
+    grid-column: 1/span 2;
+    grid-row: 3;
   }
   </style>
 </head>
@@ -40,11 +56,9 @@
     <div class="header">
       <p>header</p>
     </div>
-    <div class="main">
-      <div class="sub">subsubsub</div>
-      <div class="content-wrap">
-        <div class="content">content</div>
-      </div>
+    <div class="sub">subsubsub</div>
+    <div class="content-wrap">
+      <div class="content">content</div>
     </div>
     <div class="footer">footer</div>
   </div>
