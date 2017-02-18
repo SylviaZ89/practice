@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>拖拽div</title>
+  <style>
+    #drag {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: #e878eb;
+    }
+  </style>
+</head>
+<body>
+  <div id="drag">
+
+  </div>
+  <script>
+    var drag = document.getElementById('drag'),
+        clientX, clientY, moving;
+    var mouseDownHandler = function(event) {
+      clientX = event.clientX;
+      clientY = event.clientY;
+      moving = true;
+    }
+    var mouseMoveHandler = function(event) {
+      if(!moving) return;
+      var newClientX = event.clientX,
+          newClientY = event.clientY,
+          left = parseInt(drag.style.left) || 0,
+          top = parseInt(drag.style.top) || 0;
+      drag.style.left = left + (newClientX - clientX) + 'px';
+      drag.style.top = top + (newClientY - clientY) + 'px';
+      clientX = newClientX;
+      clientY = newClientY;
+    }
+    var mouseUpHander = function(event) {
+      moving = false;
+    }
+    drag.addEventListener('mousedown', mouseDownHandler, false);
+    drag.addEventListener('mousemove', mouseMoveHandler, false);
+    drag.addEventListener('mouseup', mouseUpHander, false);
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>响应式-2</title>
+  <style>
+  .parent {
+    width: 960px;
+    margin: 0 auto;
+  }
+  .side {
+    float: left;
+    width: 300px;
+    margin-right: 10px;
+    background: #00BCC0;
+  }
+  .main {
+    width: 650px;
+    overflow: hidden;
+    background: #FF0086;
+  }
+  @media screen and (min-width:400px) and (max-width:1000px) {
+    .parent {
+      width: auto;
+    }
+    .main {
+      width: auto;
+    }
+  }
+  @media screen and (max-width:400px) {
+    .parent {
+      width: auto;
+    }
+    .side {
+      float: none;
+      width: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    .main {
+      width: auto;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="parent">
+  	<div class="side">
+  	  <p>side</p>
+      <p>side</p>
+      <p>side</p>
+      <p>side</p>
+  	</div>
+    <div class="main">
+      <p>main</p>
+      <p>main</p>
+      <p>main</p>
+      <p>main</p>
+    </div>
+  </div>
+</body>
+</html>
